@@ -1,6 +1,6 @@
 # Web Scraper and Security Analyzer
 
-This project consists of two Python scripts: a web scraper and a security analyzer. The web scraper downloads content from a specified website, and the security analyzer examines the downloaded code for potential vulnerabilities.
+This project consists of two Python scripts: a web scraper (`scrape.py`) and a security analyzer (`scan.py`). The web scraper downloads content from a specified website, and the security analyzer examines the downloaded code for potential vulnerabilities.
 
 ## Table of Contents
 
@@ -31,25 +31,25 @@ This project consists of two Python scripts: a web scraper and a security analyz
 
 4. Set up your Google AI API key:
    - Obtain an API key from the Google AI Platform.
-   - Replace `'API'` in the `genai.configure(api_key='API')` line of the security analyzer script with your actual API key.
+   - Replace `'API'` in the `genai.configure(api_key='API')` line of `scan.py` with your actual API key.
 
 ## Usage
 
 1. Run the web scraper:
    ```
-   python web_scraper.py
+   python scrape.py
    ```
    This will download content from the specified website (default: https://ai.google.dev/competition) to the `downloaded_content` directory.
 
 2. Run the security analyzer:
    ```
-   python security_analyzer.py
+   python scan.py
    ```
    This will analyze the downloaded content for potential vulnerabilities and generate reports in the `ai_responses2` directory.
 
 ## Features
 
-### Web Scraper
+### Web Scraper (scrape.py)
 - Crawls websites up to a specified depth
 - Downloads HTML, JavaScript, and CSS content
 - Beautifies JavaScript and CSS files
@@ -57,7 +57,7 @@ This project consists of two Python scripts: a web scraper and a security analyz
 - Captures dynamic content using Playwright
 - Attempts to deobfuscate JavaScript code
 
-### Security Analyzer
+### Security Analyzer (scan.py)
 - Analyzes code for various security vulnerabilities
 - Generates detailed reports on found vulnerabilities
 - Provides severity ratings and mitigation strategies
