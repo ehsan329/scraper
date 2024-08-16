@@ -1,0 +1,14 @@
+# Web Scraper dependencies
+scrapy
+beautifulsoup4
+jsbeautifier
+cssbeautifier
+playwright
+aiohttp
+asyncio
+
+# Security Analyzer dependencies
+google-generativeai
+
+# Common dependencies
+requests
