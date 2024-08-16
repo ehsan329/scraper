@@ -14,8 +14,8 @@ This project consists of two Python scripts: a web scraper (`scrape.py`) and a s
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/web-scraper-security-analyzer.git
-   cd web-scraper-security-analyzer
+   git clone https://github.com/ehsan329/scraper.git
+   cd scraper
    ```
 
 2. Create a virtual environment (optional but recommended):
@@ -61,7 +61,7 @@ This project consists of two Python scripts: a web scraper (`scrape.py`) and a s
 - Analyzes code for various security vulnerabilities
 - Generates detailed reports on found vulnerabilities
 - Provides severity ratings and mitigation strategies
-- Uses the Google Gemini 1.5 Pro AI model for analysis
+- Uses the Google Gemini 1.5 Pro/flash AI model for analysis
 
 ## Contributing
 
