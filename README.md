@@ -1,18 +1,72 @@
-# Cybersecurity Web Scraper and Code Analyzer
+# Web Scraper and Security Analyzer
 
-This project contains two Python scripts designed to scrape web content, download and analyze code for potential security vulnerabilities. The project is divided into two main parts:
+This project consists of two Python scripts: a web scraper and a security analyzer. The web scraper downloads content from a specified website, and the security analyzer examines the downloaded code for potential vulnerabilities.
 
-1. **Enhanced Web Scraper**: This script uses Scrapy and Playwright to crawl a website, download its content, and extract inline JavaScript and CSS for analysis.
-2. **Code Security Analyzer**: This script interacts with a generative AI model to analyze the downloaded code for vulnerabilities and generate a comprehensive security report.
+## Table of Contents
 
-## Prerequisites
-
-Ensure you have Python 3.7 or higher installed on your machine.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Installation
 
-### Step 1: Clone the Repository
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/web-scraper-security-analyzer.git
+   cd web-scraper-security-analyzer
+   ```
 
-```bash
-git clone https://github.com/yourusername/cybersecurity-web-scraper.git
-cd cybersecurity-web-scraper
+2. Create a virtual environment (optional but recommended):
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
+
+3. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+4. Set up your Google AI API key:
+   - Obtain an API key from the Google AI Platform.
+   - Replace `'API'` in the `genai.configure(api_key='API')` line of the security analyzer script with your actual API key.
+
+## Usage
+
+1. Run the web scraper:
+   ```
+   python web_scraper.py
+   ```
+   This will download content from the specified website (default: https://ai.google.dev/competition) to the `downloaded_content` directory.
+
+2. Run the security analyzer:
+   ```
+   python security_analyzer.py
+   ```
+   This will analyze the downloaded content for potential vulnerabilities and generate reports in the `ai_responses2` directory.
+
+## Features
+
+### Web Scraper
+- Crawls websites up to a specified depth
+- Downloads HTML, JavaScript, and CSS content
+- Beautifies JavaScript and CSS files
+- Extracts and saves potential API endpoints
+- Captures dynamic content using Playwright
+- Attempts to deobfuscate JavaScript code
+
+### Security Analyzer
+- Analyzes code for various security vulnerabilities
+- Generates detailed reports on found vulnerabilities
+- Provides severity ratings and mitigation strategies
+- Uses the Google Gemini 1.5 Pro AI model for analysis
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
