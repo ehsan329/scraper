@@ -39,7 +39,7 @@ This project consists of two Python scripts: a web scraper (`scrape.py`) and a s
    ```
    python scrape.py
    ```
-   This will download content from the specified website (default: https://ai.google.dev/competition) to the `downloaded_content` directory.
+   This will download content from the specified website (default: https://example.com/) to the `downloaded_content` directory.
 
 2. Run the security analyzer:
    ```
